@@ -77,6 +77,18 @@ app.get('/api/download-zip', (_req, res) => {
   archive.finalize();
 });
 
+// Windows EXE Setup File download endpoint
+app.get(['/api/download-exe', '/download/anisa-ai-assistant.exe', '/anisa-ai-assistant.exe'], (_req, res) => {
+  const exePath = path.join(process.cwd(), 'anisa-ai-assistant.exe');
+  if (fs.existsSync(exePath)) {
+    res.setHeader('Content-Type', 'application/vnd.microsoft.portable-executable');
+    res.setHeader('Content-Disposition', 'attachment; filename="anisa-ai-assistant.exe"');
+    res.sendFile(exePath);
+  } else {
+    res.status(404).json({ error: 'Executable file not found' });
+  }
+});
+
 // System Instruction for Anisa's distinct personality
 const ANISA_SYSTEM_INSTRUCTION = `
 You are Anisa, a young, confident, witty, and sassy AI voice assistant.

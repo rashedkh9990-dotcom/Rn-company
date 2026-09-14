@@ -12,25 +12,16 @@ This guide explains how to set up and run **Anisa AI Assistant** on your Windows
 
 ## 🚀 Quick Setup on Windows (উইন্ডোজের জন্য সহজ পদ্ধতি)
 
-### Step 1: Download / Export the Project
-- From Google AI Studio, click **Settings > Export as ZIP** and extract the folder on your computer.
+### Method A: One-Click EXE Launcher (সবচেয়ে সহজ - `.exe` পদ্ধতি)
+1. **`anisa-ai-assistant.exe`** ফাইলটিতে ডাবল ক্লিক করুন।
+2. এটি স্বয়ংক্রিয়ভাবে Node.js চেক করবে (না থাকলে ব্রাউজারে লিংক খুলবে), প্যাকেজ ইনস্টল করবে এবং `.env` ফাইল তৈরি করবে।
+3. `.env` ফাইলে আপনার Gemini API Key বসিয়ে সেভ করুন।
+4. ব্রাউজারে স্বয়ংক্রিয়ভাবে [http://localhost:3000](http://localhost:3000) খুলে যাবে এবং আপনি অনীসার সাথে কথা বলা শুরু করতে পারবেন!
 
-### Step 2: Run Setup
-- Double-click **`setup.bat`**.
-- It will install all required packages and prepare the application.
-
-### Step 3: Add Your Gemini API Key
-- Open the `.env` file with Notepad or your code editor.
-- Replace `MY_GEMINI_API_KEY` with your actual Gemini API key:
-  ```env
-  GEMINI_API_KEY=AIzaSy...your-actual-api-key
-  ```
-- Save the file (`Ctrl + S`).
-
-### Step 4: Start Anisa!
-- Double-click **`start.bat`**.
-- Your web browser will automatically open [http://localhost:3000](http://localhost:3000).
-- Click the center orb, allow microphone permission, and start talking!
+### Method B: Using Batch Files
+1. **`setup.bat`** ফাইলে ডাবল-ক্লিক করুন।
+2. `.env` ফাইলে আপনার Gemini API Key যোগ করুন।
+3. **`start.bat`** ফাইলে ডাবল-ক্লিক করে অ্যাপ চালু করুন।
 
 ---
 

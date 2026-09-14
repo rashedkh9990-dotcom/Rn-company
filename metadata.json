@@ -1,0 +1,6 @@
+{
+  "name": "Anisa AI Assistant",
+  "description": "Real-time voice-to-voice AI companion powered by Gemini Live API with a confident, witty, and sassy persona.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
